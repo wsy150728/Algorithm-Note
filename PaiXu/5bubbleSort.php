@@ -38,6 +38,33 @@ function bubbleSortFlag($arr){
     }
     return $arr;
 }
-$arr = array(13,24,1,7,34,57,46,21);
-$arr = bubbleSortFlag($arr);
+//优化2
+function bubbleSortDouble($arr){
+    $count = count($arr);
+    for($i=0;$i<($count-1)/2;$i++){
+        $flag = false;
+        for($j=$i;$j<$count-$i-1;$j++){
+            if($arr[$j]>$arr[$j+1]){
+                $temp = $arr[$j];
+                $arr[$j] = $arr[$j+1];
+                $arr[$j+1] = $temp;
+                $flag = true;
+            }
+        }
+        for($j=$count-$i-1;$j>$i;$j--){
+            if($arr[$j]<$arr[$j-1]){
+                $temp = $arr[$j];
+                $arr[$j] = $arr[$j-1];
+                $arr[$j-1] = $temp;
+                $flag = true;
+            }
+        }
+        if(!$flag){
+            break;
+        }
+    }
+    return $arr;
+}
+$arr = array(13,24,1,7,34,57,46,21,13,26,54,34,75,123,432,27);
+$arr = bubbleSortDouble($arr);
 print_r($arr);exit;
