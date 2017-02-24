@@ -17,7 +17,7 @@ function shellSort($array)
                 echo 'j = '.$j.'| i ='.$i.'| h = '.$h.'| temp = '.$temp.'| arr['.$j.'] = '.$array[$j].'| arr['.($j + $h).'] = '.$array[$j + $h].'<br/>';
                 $array[$j + $h] = $array[$j];
             }
-            $array[$j + $h] = $temp;
+            $array[$j + $h] = $temp;//这里key之所以还要加$h是因为上面先-$h再做的判断
         }
         //每次排序的情况
         foreach ($array as $v){echo $v.' ';}echo '<br/>';
