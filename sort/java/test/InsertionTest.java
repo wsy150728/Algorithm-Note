@@ -1,12 +1,11 @@
 package test;
 
-import code.Bubble;
 import code.Insertion;
 
 import java.util.Arrays;
 
 @SuppressWarnings("rawtypes")
-public class InsertTest {
+public class InsertionTest {
 
     public static void main(String[] args) {
         Integer[] a1 = {4,5,6,3,2,1};

@@ -34,7 +34,7 @@ public class Selection {
     }
 
     private static boolean greater(Comparable x, Comparable y) {
-        return x.compareTo(y) >= 0;
+        return x.compareTo(y) > 0;
     }
 
     private static void exchange(Comparable[] a, int i, int j) {

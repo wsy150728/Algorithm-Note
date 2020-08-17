@@ -1,19 +1,18 @@
 package test;
 
-import code.Bubble;
-import code.Insertion;
+import code.Shell;
 
 import java.util.Arrays;
 
 @SuppressWarnings("rawtypes")
-public class InsertTest {
+public class ShellTest {
 
     public static void main(String[] args) {
-        Integer[] a1 = {4,5,6,3,2,1};
+        Integer[] a1 = {9, 1, 2, 5, 7, 4, 8, 6, 3, 5};
 
         System.out.println(Arrays.toString(a1));
 
-        Insertion.sort(a1);
+        Shell.sort(a1);
 
         System.out.println(Arrays.toString(a1));
     }
